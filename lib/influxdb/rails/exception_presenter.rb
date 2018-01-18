@@ -66,8 +66,8 @@ module InfluxDB
 
       def values
         {
-          :message => @exception.message,
-          :backtrace => JSON.generate(@backtrace.to_a),
+          :exception_message => @exception.message,
+          :exception_backtrace => JSON.generate(@backtrace.to_a),
         }
       end
 
